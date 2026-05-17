@@ -177,6 +177,48 @@
   filter: brightness(0.55) saturate(1.7) hue-rotate(-12deg);
 }
 
+/* Download CV button in sidebar */
+.download-cv-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px auto 0;
+  padding: 10px 18px;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  text-decoration: none;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-1);
+}
+
+.download-cv-btn:hover,
+.download-cv-btn:focus {
+  transform: translateY(-2px);
+  border-color: var(--orange-yellow-crayola);
+  box-shadow: 0 10px 22px hsla(0, 0%, 0%, 0.55);
+}
+
+[data-theme="light"] .download-cv-btn:hover,
+[data-theme="light"] .download-cv-btn:focus {
+  box-shadow: 0 10px 22px hsla(0, 0%, 0%, 0.18);
+}
+
+.download-cv-btn ion-icon {
+  font-size: 18px;
+  --ionicon-stroke-width: 40px;
+}
+
+@media (min-width: 1250px) {
+  .download-cv-btn {
+    width: calc(100% - 60px);
+  }
+}
+
 
 /* Theme toggle button */
 .theme-toggle {
