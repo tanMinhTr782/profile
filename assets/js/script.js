@@ -7,6 +7,31 @@ const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 
 
+// theme toggle (light / dark) with localStorage persistence
+const themeToggleBtn = document.querySelector("[data-theme-toggle]");
+const storedTheme = localStorage.getItem("theme");
+const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+const initialTheme = storedTheme || (prefersLight ? "light" : "dark");
+
+if (initialTheme === "light") {
+  document.documentElement.setAttribute("data-theme", "light");
+}
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener("click", function () {
+    const isLight = document.documentElement.getAttribute("data-theme") === "light";
+    if (isLight) {
+      document.documentElement.removeAttribute("data-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+    }
+  });
+}
+
+
+
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
