@@ -161,24 +161,45 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// page navigation variables
+// page navigation variables (single-page scroll mode)
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
+// helper: set the active nav link by section name
+const setActiveNav = function (sectionName) {
+  navigationLinks.forEach(function (link) {
+    if (link.innerText.trim().toLowerCase() === sectionName) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
     }
-
   });
+};
+
+// click a nav link -> smooth scroll to the matching section
+navigationLinks.forEach(function (link) {
+  link.addEventListener("click", function () {
+    const target = Array.from(pages).find(function (p) {
+      return p.dataset.page === link.innerText.trim().toLowerCase();
+    });
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      setActiveNav(link.innerText.trim().toLowerCase());
+    }
+  });
+});
+
+// scroll-spy: highlight the nav link of whichever section is currently in view
+if ("IntersectionObserver" in window) {
+  const spyObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        setActiveNav(entry.target.dataset.page);
+      }
+    });
+  }, {
+    rootMargin: "-30% 0px -55% 0px",
+    threshold: 0
+  });
+  pages.forEach(function (p) { spyObserver.observe(p); });
 }

@@ -5,7 +5,33 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tan Tran Minh - Personal Portfolio</title>
+  <title>Tan Tran Minh - Full-stack Engineer Portfolio</title>
+
+  <!--
+    - SEO + Open Graph (LinkedIn, Twitter, Facebook share previews)
+  -->
+  <meta name="description" content="Tan Tran Minh — Full-stack Engineer based in Ho Chi Minh City. Building end-to-end products with React, Next.js, NestJS, .NET, and React Native.">
+  <meta name="author" content="Tan Tran Minh">
+  <meta name="keywords" content="Tan Tran Minh, Full-stack Engineer, Software Engineer, Web Developer, React, Next.js, NestJS, .NET, React Native, Vietnam, Ho Chi Minh City">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tanminh782.info.vn/">
+  <meta property="og:site_name" content="Tan Tran Minh — Portfolio">
+  <meta property="og:title" content="Tan Tran Minh — Full-stack Engineer">
+  <meta property="og:description" content="Full-stack Engineer based in Ho Chi Minh City. Building end-to-end products with React, Next.js, NestJS, .NET, and React Native.">
+  <meta property="og:image" content="https://tanminh782.info.vn/assets/images/my-avatar.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tan Tran Minh — Full-stack Engineer Portfolio">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://tanminh782.info.vn/">
+  <meta name="twitter:title" content="Tan Tran Minh — Full-stack Engineer">
+  <meta name="twitter:description" content="Full-stack Engineer based in Ho Chi Minh City. Building end-to-end products with React, Next.js, NestJS, .NET, and React Native.">
+  <meta name="twitter:image" content="https://tanminh782.info.vn/assets/images/my-avatar.png">
+
+  <link rel="canonical" href="https://tanminh782.info.vn/">
 
   <!--
     - favicon
@@ -58,7 +84,7 @@
 
         <a href="./assets/Tan_Tran_Minh_Resume.pdf" download="Tan_Tran_Minh_Resume.pdf" class="download-cv-btn">
           <ion-icon name="download-outline"></ion-icon>
-          <span> Get Resume </span>
+          <span> Resume </span>
         </a>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -146,6 +172,12 @@
           <li class="social-item">
             <a href="https://twitter.com/tanMinhTr782" target="_blank" rel="noopener" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/tantran782" target="_blank" rel="noopener" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
@@ -797,15 +829,11 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>Mobile</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn>Web</button>
             </li>
 
           </ul>
@@ -829,15 +857,11 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Mobile</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>Web</button>
               </li>
 
             </ul>
@@ -846,169 +870,109 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="mobile">
+              <a href="#" target="_blank" rel="noopener">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="open-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                  <div class="project-cover">
+                    <ion-icon name="restaurant-outline"></ion-icon>
+                  </div>
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">Foodtography</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Mobile · React Native + NestJS</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web">
+              <a href="#" target="_blank" rel="noopener">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="open-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                  <div class="project-cover">
+                    <ion-icon name="storefront-outline"></ion-icon>
+                  </div>
                 </figure>
 
-                <h3 class="project-title">Orizon</h3>
+                <h3 class="project-title">Potastore</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Web · ReactJS + NestJS + Python</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web">
+              <a href="#" target="_blank" rel="noopener">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="open-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                  <div class="project-cover">
+                    <ion-icon name="school-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Brawlhalla</h3>
+                <h3 class="project-title">School Management System</h3>
 
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
+                <p class="project-category">Web · PHP + MySQL</p>
 
               </a>
             </li>
 
           </ul>
+
+          <div class="project-detail-list">
+
+            <article class="project-detail">
+              <h3 class="h3 project-detail-title">Foodtography</h3>
+              <p class="project-detail-text">
+                A recipe app that helps people find the best recipe for their meals. Led a team of 4
+                developers through scoping, design, and implementation.
+              </p>
+              <ul class="project-detail-points">
+                <li>Shipped image-to-text search returning results within 7s.</li>
+                <li>Designed the prototype and design system in Figma.</li>
+                <li>Tech stack: React Native, NestJS, Figma, draw.io.</li>
+              </ul>
+            </article>
+
+            <article class="project-detail">
+              <h3 class="h3 project-detail-title">Potastore</h3>
+              <p class="project-detail-text">
+                An e-commerce site for buying fruits and vegetables online. Led a team of 3 over 2
+                months from scoping through delivery.
+              </p>
+              <ul class="project-detail-points">
+                <li>Integrated image-to-text search to find items by photo within 5s.</li>
+                <li>Built user-facing APIs: profile, item management, and order history.</li>
+                <li>Tech stack: ReactJS, NestJS, Python, Microsoft SQL Server, Figma.</li>
+              </ul>
+            </article>
+
+            <article class="project-detail">
+              <h3 class="h3 project-detail-title">School Management System</h3>
+              <p class="project-detail-text">
+                A mini school management web app for managing students and teachers.
+              </p>
+              <ul class="project-detail-points">
+                <li>Designed the Entity-Relationship Diagram and mapped it to tables.</li>
+                <li>Built CRUD APIs for students and teachers.</li>
+                <li>Tech stack: PHP, MySQL, HTML/CSS.</li>
+              </ul>
+            </article>
+
+          </div>
 
         </section>
 
