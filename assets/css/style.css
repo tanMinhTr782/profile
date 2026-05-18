@@ -2066,16 +2066,18 @@ textarea.form-input::-webkit-resizer { display: none; }
   .sidebar {
     position: sticky;
     top: 15px;
-    max-height: calc(100vh - 30px);
-    overflow-y: auto;
+    max-height: max-content;
     margin-bottom: 0;
-    padding-top: 60px;
+    padding: 30px 25px;
     z-index: 1;
   }
 
-  .sidebar-info { flex-direction: column; }
+  .sidebar-info {
+    flex-direction: column;
+    gap: 12px;
+  }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box img { width: 110px; }
 
   .info-content .name {
     white-space: nowrap;
@@ -2091,25 +2093,33 @@ textarea.form-input::-webkit-resizer { display: none; }
     visibility: visible;
   }
 
-  .contacts-list { grid-template-columns: 1fr; }
+  .contacts-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .contact-item { gap: 12px; }
 
   .contact-info :is(.contact-link) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .contact-info :is(.contact-link, time, address) {
-    --fs-7: 14px;
+    --fs-7: 13px;
     font-weight: var(--fw-300);
   }
 
+  .separator { margin: 12px 0; }
+
   .separator:last-of-type {
-    margin: 15px 0;
+    margin: 10px 0 6px;
     opacity: 0;
   }
 
   .social-list { justify-content: center; }
+
+  .download-cv-btn { margin: 6px auto 0; }
 
 
 
